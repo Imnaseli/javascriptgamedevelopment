@@ -1,0 +1,4 @@
+
+.drawimage(IMAGEFILE , sx ,sy , sw, sh, dx, dy, dw, dh)
+sx = for spriteframes horizontally
+sy = for spriteframes viertically 
