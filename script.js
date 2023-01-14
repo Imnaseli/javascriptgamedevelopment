@@ -8,7 +8,9 @@ const spriteHeight = 523
 let frameX = 0
 let frameY = 0
 let gameFrame = 0 
-let staggerFrame = 5 
+const staggerFrame = 5 
+const spreiteanimations = []
+
 
 const playerimage = new Image()
 playerimage.src = 'shadowdog.png'
