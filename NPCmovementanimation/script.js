@@ -6,16 +6,19 @@ const CANVAS_HEIGHT = canvas.height = 1000
 const numberofenemies = 100
 const enemiesArray = []
 
-
+const enemyImage = new Image()
+enemyImage.src = "enemy1.png"
 
 
 class Enemy{
     constructor(){
         this.x = Math.random() * CANVAS_WIDTH
         this.y = Math.random() * CANVAS_HEIGHT
-        this.height = 100
-        this.width = 100
         this.speed = Math.random() * 4 - 2
+        this.spriteWidth = 293
+        this.spriteheight = 155
+        this.height = this.spriteheight / 3
+        this.width = this.spriteWidth / 3
     }
     update(){
         this.x += this.speed
@@ -23,6 +26,7 @@ class Enemy{
     }
     draw(){
         ctx.strokeRect(this.x, this.y , this.width, this.height)
+        ctx.drawImage(enemyImage , 0, 0,this.spriteWidth,this.spriteheight, this.x , this.y , this.width , this.height)
     }
 }
 
